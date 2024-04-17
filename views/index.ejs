@@ -3,9 +3,49 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <div id="wrapper" >
+      <div id="page1" class="h-screen w-full">
+        <div class="nav px-20 py-6  w-full flex items-center justify-between">
+          <div class="nav-l flex items-center">
+            <img src="/images/logo.png " class=" h-[60px]">
+            <h2 class="text-2xl font-bold mt-4">DocCare<span class="text-2xl text-teal-500 ">.</span></h2>
+          </div>
+          <div class="nav-m flex gap-14 mr-20">
+            <h4 class="text-[18px] font-normal">Home</h4>
+            <h4 class="text-[18px] font-normal">Services</h4>
+            <h4 class="text-[18px] font-normal">Find a Docter</h4>
+            <h4 class="text-[18px] font-normal">Contact</h4>
+          </div>
+          <div class="nav-r">
+            <button class="px-5 py-2 font-medium border-[1px] border-gray-500 rounded-full">Log in</button>
+          </div>
+        </div>
+        <div class="cen h-[85.3%] w-full flex">
+          <div class="cen-l pl-20 pt-36 w-[65%] ">
+            <h1 class="text-[5.5vw] leading-[8vw] tracking-tighter font-bold text-teal-600">Take Care of Your</h1>
+            <div class="flex items-center">
+                <div class="h-20 w-32 rounded-lg  overflow-hidden">
+                  <img src="/images/img7.gif" class="w-full h-full overflow-hidden" alt="">
+                </div>
+              <h1 class="text-[5.5vw] leading-[5.5vw] tracking-tighter text-white   font-bold ">Health Anytime</h1>
+            </div>
+            <h1 class="text-[5.5vw] leading-[5.5vw] tracking-tighter text-white  font-bold">Anywhere<span class="text-teal-600">.</span></h1>
+
+            <p class="text-teal-900 font-semibold mt-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Animi commodi aliquid at quo voluptates quae?</p>
+          </div>
+          <div class="cen-r flex relative w-[35%]">
+            <img src="/images/img5.png " class="h-56 absolute top-[30%] left-[-5%]" alt="">
+            <img src="/images/img6.png " class="h-60 absolute top-[55%] right-[5%]" alt="">
+            <img src="/images/img1.png " class="rounded-3xl h-56 absolute top-[10%] right-[5%]" alt="">
+          </div>
+        </div>
+      </div>
+      <div id="page2" class="w-full h-screen">
+        
+      </div>
+    </div>
   </body>
 </html>
