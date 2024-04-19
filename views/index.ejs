@@ -3,7 +3,13 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
   </head>
   <body>
     <div id="wrapper" >
@@ -14,13 +20,13 @@
             <h2 class="text-2xl font-bold mt-4">DocCare<span class="text-2xl text-teal-500 ">.</span></h2>
           </div>
           <div class="nav-m flex gap-14 mr-20">
-            <h4 class="text-[18px] font-normal">Home</h4>
-            <h4 class="text-[18px] font-normal">Services</h4>
-            <h4 class="text-[18px] font-normal">Find a Docter</h4>
-            <h4 class="text-[18px] font-normal">Contact</h4>
+            <h4 class="text-[18px] font-normal cursor-pointer">Home</h4>
+            <h4 class="text-[18px] font-normal cursor-pointer">Services</h4>
+            <h4 class="text-[18px] font-normal cursor-pointer">Find a Docter</h4>
+            <h4 class="text-[18px] font-normal cursor-pointer">Contact</h4>
           </div>
           <div class="nav-r">
-            <button class="px-5 py-2 font-medium border-[1px] border-gray-500 rounded-full">Log in</button>
+            <button class="px-5 py-2 font-medium border-[1px] border-gray-500 rounded-full"><a href="/login">Log in</a></button>
           </div>
         </div>
         <div class="cen h-[85.3%] w-full flex">
@@ -76,7 +82,7 @@
       
       
     </div>
-    <div id="page3" class="w-full h-screen  flex items-center justify-center bg-white">
+    <div id="page3" class="w-full h-screen  flex items-center justify-center">
 
       <div class="page3-inner w-full flex items-center">
         <div class="pg3-left pl-28  w-[55%]" >
@@ -87,7 +93,7 @@
           </h1 >
           <p  class="text-gray-500 w-96 mt-6 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dolorem autem voluptates, fuga reprehenderit dolorum maiores et cum doloremque molestias eveniet obcaecati suscipit molestiae!</p>
 
-          <button class="px-8 py-4 bg-teal-500 text-2xl border-[#928d8d] hover:bg-teal-500 hover:text-white ease-in-out to-lime-400 hover:scale-[0.95] border-[1px] bg-transparent mt-8 rounded-tr-3xl  rounded-bl-3xl">Find Doctors</button>
+          <button class="px-8 py-4 bg-teal-500 text-2xl border-[#928d8d] hover:bg-teal-700 hover:text-white ease-in-out to-lime-400 hover:scale-[0.95] border-[1px] bg-transparent mt-8 rounded-tr-3xl  rounded-bl-3xl">Find Doctors</button>
 
         </div>
         <div class="pg3-right">
@@ -98,5 +104,40 @@
       </div>
       
     </div>
+   <div id="page4" class="h-screen w-full flex mt-20">
+    <div class="page4-l pl-28 h-full w-[50%]">
+      
+        <h3 class="uppercase ml-3 text-xl tracking-tighter font-bold text-[#050A44]">User reviews</h3>
+        <h1 class="text-[3.5vw] tracking-tighter font-bold text-teal-600 leading-none mt-4">Read the best reviews<br>
+          from our user
+
+        </h1 >
+        <p  class="text-zinc-700 font-semibold  w-96 mt-6 ">"Discover why our users love us! Dive into heartfelt testimonials highlighting our exceptional care and service. See why we're their top choice for healthcare needs."</p>
+
+        <button class="px-8 py-4 bg-teal-500 text-2xl border-[#928d8d] hover:bg-teal-700 hover:text-white ease-in-out to-lime-400 hover:scale-[0.95] border-[1px] bg-transparent mt-8 rounded-tr-3xl  rounded-bl-3xl">Find Doctors</button>
+        <img src="/images/im13.png" class="h-64 ml-[400px] -mt-[80px]" alt="">
+
+      
+    </div>
+    <div class="page4-r h-full w-[50%]">
+      
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+    </div>
+  </div>
+    </div>
+
+   </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/javascripts/script.js"></script>
   </body>
 </html>
