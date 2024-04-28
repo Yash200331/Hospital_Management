@@ -144,10 +144,10 @@
     <section class="wrapper">
       <div class="form signup">
         <header>Signup</header>
-        <form action="#">
-          <input type="text" placeholder="Full name" required />
-          <input type="text" placeholder="Email address" required />
-          <input type="password" placeholder="Password" required />
+        <form action="/register" method="post">
+          <input type="text" placeholder="Full name" required name="username"/>
+          <input type="text" placeholder="Email address" required name="email" />
+          <input type="password" placeholder="Password" required name="password" />
           <div class="select flex justify-between">
             <div>
               <label for="">Are you a:</label>
@@ -170,9 +170,9 @@
 
       <div class="form login">
         <header>Login</header>
-        <form action="#">
-          <input type="text" placeholder="Email address" required />
-          <input type="password" placeholder="Password" required />
+        <form action="/login" method="post">
+          <input type="text" placeholder="Email address" required name="username" />
+          <input type="password" placeholder="Password" required name="password"/>
           <a href="#">Forgot password?</a>
           <input type="submit" value="Login" />
         </form>
