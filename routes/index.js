@@ -23,6 +23,9 @@ router.get('/',isLoggedIn, function(req, res, next) {
 router.get('/login', function(req, res, next) {
   res.render('login');
 });
+router.get('/find-docter', function(req, res, next) {
+  res.render('docter');
+});
 router.post('/register',function(req,res){
   const userData=new userModel({
     username:req.body.username,

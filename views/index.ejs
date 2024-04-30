@@ -10,9 +10,29 @@
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 />
 
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+/>
   </head>
   <body>
-    <div id="wrapper" >
+    <div id="loader">
+      <div class="load">
+        <div id="timer">
+          <h4>0</h4>
+          <h5>- 100</h5>
+        </div>
+        <h1>Hospital</h1>
+      </div>
+      <div class="load">
+        <h1 class="load-h1">management</h1>
+      </div>
+      <div class="load">
+        <h1>is loading right</h1>
+        <h2>Now</h2>
+      </div>
+    </div>
+    <div id="wrapper" class="overflow-x-hidden" >
       <div id="page1" class="h-screen w-full">
         <div class="nav px-20 py-6  w-full flex items-center justify-between">
           <div class="nav-l flex items-center">
@@ -22,7 +42,7 @@
           <div class="nav-m flex gap-14 mr-20">
             <h4 class="text-[18px] font-normal cursor-pointer">Home</h4>
             <h4 class="text-[18px] font-normal cursor-pointer">Services</h4>
-            <h4 class="text-[18px] font-normal cursor-pointer">Find a Docter</h4>
+            <h4 class="text-[18px] font-normal cursor-pointer"><a href="/find-docter">Find a Docter</a></h4>
             <h4 class="text-[18px] font-normal cursor-pointer">Contact</h4>
           </div>
           <div class="nav-r">
@@ -114,7 +134,7 @@
         </h1 >
         <p  class="text-zinc-700 font-semibold  w-96 mt-6 ">"Discover why our users love us! Dive into heartfelt testimonials highlighting our exceptional care and service. See why we're their top choice for healthcare needs."</p>
 
-        <button class="px-8 py-4 bg-teal-500 text-2xl border-[#928d8d] hover:bg-teal-700 hover:text-white ease-in-out to-lime-400 hover:scale-[0.95] border-[1px] bg-transparent mt-8 rounded-tr-3xl  rounded-bl-3xl">Find Doctors</button>
+
         <img src="/images/im13.png" class="h-64 ml-[400px] -mt-[80px]" alt="">
 
       
@@ -123,7 +143,18 @@
       
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide ">
+        <article class="profile">
+          <div class="profile-image">
+            <img src="./images/img5.png" />
+          </div>
+          <h2 class="profile-username">Elena Zoldado</h2>
+          <small class="profile-user-handle">@elena_zoldado</small>
+         
+          <p class="text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore corrupti voluptatem ipsa dolor molestias. Autem molestias, veniam aliquid nemo eveniet nisi, dolores doloribus consequuntur corporis iure repellendus cumque et facere!</p>
+         
+        </article>
+      </div>
       <div class="swiper-slide">Slide 2</div>
       <div class="swiper-slide">Slide 3</div>
       <div class="swiper-slide">Slide 4</div>
@@ -135,9 +166,26 @@
     </div>
   </div>
     </div>
-
+    
+  </div>
+  <div id="page5" class="h-screen w-full">
+    
    </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="/javascripts/script.js"></script>
   </body>
 </html>
