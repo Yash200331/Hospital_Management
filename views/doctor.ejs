@@ -16,86 +16,30 @@
             </div>
         </div>
         <div class="cards w-full px-20 py-10 flex flex-wrap gap-12">
-            <div class="card overflow-hidden  w-[20%] rounded-lg">
-                <div class="img h-60 rounded-lg overflow-hidden  ">
-                    <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                </div>
-                <h3 class="text-xl mt-4 font-bold">Dr. Alfaz Ahmed</h3>
-                <div class="specialization mt-4 w-full flex justify-between items-center">
-                    <div class="px-6 py-2 w-fit rounded-md bg-blue-200 text-white"><h2 class="text-blue-500 font-bold">Surgon</h2></div>
-                    <div class="flex gap-1 items-center justify-center">
-                        <h4 class="text-md font-bold">⭐</h4>
-                        <h4 class="text-md font-bold">4.5</h4>
-                        <h4 class="text-md font-bold">(2)</h4>
+            <% doctors.forEach(function(doc){ %>
+                <div class="card overflow-hidden  w-[20%] rounded-lg">
+                    <div class="img h-60 rounded-lg overflow-hidden  ">
+                        <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    </div>
+                    <h3 class="text-xl mt-4 font-bold"><%= doc.name %></h3>
+                    <div class="specialization mt-4 w-full flex justify-between items-center">
+                        <div class="px-6 py-2 w-fit rounded-md bg-blue-200 text-white"><h2 class="text-blue-500 font-bold"><%= doc.specialization %></h2></div>
+                        <div class="flex gap-1 items-center justify-center">
+                            <h4 class="text-md font-bold">⭐</h4>
+                            <h4 class="text-md font-bold">4.5</h4>
+                            <h4 class="text-md font-bold">(2)</h4>
+                        </div>
+                    </div>
+                    <div class="add mt-4">
+                        <h3 class="text-sm opacity-70 tracking-tighter font-semibold "><%= doc.qualifications %></h3>
+                    </div>
+                    <div class="view-profile mt-5 flex w-full  items-center ">
+                        <a  class="text-md px-4 py-2 bg-teal-600 rounded-lg font-semibold" href="/DoctorProfile">View Profile</a>
                     </div>
                 </div>
-                <div class="add mt-4">
-                    <h3 class="text-sm opacity-70 tracking-tighter font-semibold ">Anganwadi Adora Hospital, Bhopal</h3>
-                </div>
-                <div class="view-profile mt-5 flex w-full  items-center ">
-                    <a class="text-md px-4 py-2 bg-teal-600 rounded-lg font-semibold" href="/DoctorProfile">View Profile</a>
-                </div>
-            </div>
-            <div class="card overflow-hidden  w-[20%] rounded-lg">
-                <div class="img h-60 rounded-lg overflow-hidden  ">
-                    <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                </div>
-                <h3 class="text-xl mt-4 font-bold">Dr. Alfaz Ahmed</h3>
-                <div class="specialization mt-4 w-full flex justify-between items-center">
-                    <div class="px-6 py-2 w-fit rounded-md bg-blue-200 text-white"><h2 class="text-blue-500 font-bold">Surgon</h2></div>
-                    <div class="flex gap-1 items-center justify-center">
-                        <h4 class="text-md font-bold">⭐</h4>
-                        <h4 class="text-md font-bold">4.5</h4>
-                        <h4 class="text-md font-bold">(2)</h4>
-                    </div>
-                </div>
-                <div class="add mt-4">
-                    <h3 class="text-sm opacity-70 tracking-tighter font-semibold ">Anganwadi Adora Hospital, Bhopal</h3>
-                </div>
-                <div class="view-profile mt-5 flex w-full  items-center ">
-                    <a class="text-md px-4 py-2 bg-teal-600 rounded-lg font-semibold" href="">View Profile</a>
-                </div>
-            </div>
-            <div class="card overflow-hidden  w-[20%] rounded-lg">
-                <div class="img h-60 rounded-lg overflow-hidden  ">
-                    <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                </div>
-                <h3 class="text-xl mt-4 font-bold">Dr. Alfaz Ahmed</h3>
-                <div class="specialization mt-4 w-full flex justify-between items-center">
-                    <div class="px-6 py-2 w-fit rounded-md bg-blue-200 text-white"><h2 class="text-blue-500 font-bold">Surgon</h2></div>
-                    <div class="flex gap-1 items-center justify-center">
-                        <h4 class="text-md font-bold">⭐</h4>
-                        <h4 class="text-md font-bold">4.5</h4>
-                        <h4 class="text-md font-bold">(2)</h4>
-                    </div>
-                </div>
-                <div class="add mt-4">
-                    <h3 class="text-sm opacity-70 tracking-tighter font-semibold ">Anganwadi Adora Hospital, Bhopal</h3>
-                </div>
-                <div class="view-profile mt-5 flex w-full  items-center ">
-                    <a class="text-md px-4 py-2 bg-teal-600 rounded-lg font-semibold" href="">View Profile</a>
-                </div>
-            </div>
-            <div class="card overflow-hidden  w-[20%] rounded-lg">
-                <div class="img h-60 rounded-lg overflow-hidden  ">
-                    <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                </div>
-                <h3 class="text-xl mt-4 font-bold">Dr. Alfaz Ahmed</h3>
-                <div class="specialization mt-4 w-full flex justify-between items-center">
-                    <div class="px-6 py-2 w-fit rounded-md bg-blue-200 text-white"><h2 class="text-blue-500 font-bold">Surgon</h2></div>
-                    <div class="flex gap-1 items-center justify-center">
-                        <h4 class="text-md font-bold">⭐</h4>
-                        <h4 class="text-md font-bold">4.5</h4>
-                        <h4 class="text-md font-bold">(2)</h4>
-                    </div>
-                </div>
-                <div class="add mt-4">
-                    <h3 class="text-sm opacity-70 tracking-tighter font-semibold ">Anganwadi Adora Hospital, Bhopal</h3>
-                </div>
-                <div class="view-profile mt-5 flex w-full  items-center ">
-                    <a class="text-md px-4 py-2 bg-teal-600 rounded-lg font-semibold" href="/Docter-profile">View Profile</a>
-                </div>
-            </div>
+
+           <% }) %>
+            
             
         </div>
     </div>

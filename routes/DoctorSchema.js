@@ -1,6 +1,7 @@
-import mongoose from "mongoose";
+const mongoose=require('mongoose')
 
 const DoctorSchema = new mongoose.Schema({
+  username: { type: String, required: true, unique: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   name: { type: String, required: true },
@@ -24,7 +25,6 @@ const DoctorSchema = new mongoose.Schema({
   bio: { type: String, maxLength: 50 },
   about: { type: String },
   timeSlots: { type: Array },
-  reviews: [{ type: mongoose.Types.ObjectId, ref: "Review" }],
   averageRating: {
     type: Number,
     default: 0,
@@ -41,4 +41,4 @@ const DoctorSchema = new mongoose.Schema({
   appointments: [{ type: mongoose.Types.ObjectId, ref: "Appointment" }],
 });
 
-export default mongoose.model("Doctor", DoctorSchema);
+module.exports= mongoose.model("Doctor", DoctorSchema);
