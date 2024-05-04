@@ -1,15 +1,3 @@
-// var express = require('express');
-// var router = express.Router();
-
-// /* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index', { title: 'Express' });
-// });
-// router.get('/login', function(req, res, next) {
-//   res.render('login', { title: 'Express' });
-// });
-
-// module.exports = router;
 const express = require('express');
 const router = express.Router();
 const userModel=require('./users')
@@ -23,26 +11,43 @@ router.get('/',isLoggedIn, function(req, res, next) {
 router.get('/login', function(req, res, next) {
   res.render('login');
 });
-router.get('/find-docter', function(req, res, next) {
-  res.render('docter');
+router.get('/createDoc', function(req, res, next) {
+  res.render('createDoc');
 });
-router.get('/Docter-Profile', function(req, res, next) {
+router.get('/findDoctor', function(req, res, next) {
+  res.render('doctor');
+});
+router.get('/DoctorProfile', function(req, res, next) {
   res.render('profileDoc');
 });
-router.post('/register',function(req,res){
-  const userData=new userModel({
-    username:req.body.username,
-    fullname:req.body.fullname,
-    email:req.body.email
-  });
-  userModel.register(userData,req.body.password)
-  .then(function(registereduser){
-    passport.authenticate("local")(req,res,function(){
-      res.redirect('/')
-    })
-  })
-})
+router.post('/register', async function(req,res,next){
+  const { username, password, role } = req.body;
+try {
+  const existingAdmin = await userModel.findOne({ role: 'admin' });
+    if (role === 'admin' && existingAdmin) {
+      throw new Error('Admin already exists.'); 
+    }
+    else{
+      const user = await new userModel({
+        username: req.body.username,
+        name:req.body.name,
+        email:req.body.email,
+        role:req.body.role,
+      })
+      userModel.register(user,req.body.password)
+      .then(function(){
+      passport.authenticate('local')(req,res, function(err){
+        res.redirect('/')
+      })
+      })
+    }
 
+} catch (error) {
+  console.error(error);
+  res.render('login', { error: error.message });
+}
+
+})
 router.post("/login",passport.authenticate("local",{
   successRedirect:"/",
   failureRedirect:"/login"
