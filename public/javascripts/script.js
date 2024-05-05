@@ -30,6 +30,13 @@ function loco() {
     
 }
 
+
+gsap.from(".gif img",{
+    width:"0",
+    duration:"1",
+    delay:"1"
+})
+
 loco()
 
 

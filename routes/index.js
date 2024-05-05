@@ -16,6 +16,9 @@ router.get('/login', function(req, res, next) {
 router.get('/createDoc', function(req, res, next) {
   res.render('createDoc');
 });
+router.get('/paymentPage', function(req, res, next) {
+  res.render('paymentPage');
+});
 router.get('/doctor',async function(req, res, next) {
   const doctors=await doctorModel.find();
   res.render('doctor',{doctors});
