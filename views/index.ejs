@@ -30,33 +30,43 @@ href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scrol
         width: 100%;
     }
     .menu{
-      height: 100vh;
-      width: 35%;
-      background-color: red;
+      background-color: #FFF8E3;
+      backdrop-filter: blur(20px);
+      padding: 150px 60px;
+      font-weight: 500;
+      margin-bottom: 10px;
       position: absolute;
-      right: 0;
-      z-index: 8;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .menuInner{
-      height: 90%;
-      width: 80%;
-      background-color: rgb(255, 255, 255);
-      display: flex;
-      flex-direction: column;
-      padding: 5vh;
+      top: 0%;
+      
+      right: -35%;
 
+      
+      
     }
-    .menuInner h4{
-      font-size: 5vh;
+    .movement,.movement2,.movement3,.movement4{
+    width: fit-content;
+    /* background-color: black; */
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+    
+    height:8vh ;
+}
 
-    }
+
+.movement,.movement2,.movement3,.movement4 h1{
+  line-height: 3.5vw;
+  position: relative;
+  
+}
+ 
+
+
+    
+    
     
   </style>
   <body>
-    <div id="loader">
+    <!-- <div id="loader">
       <div class="load">
         <div id="timer">
           <h4>0</h4>
@@ -70,18 +80,31 @@ href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scrol
       <div class="load">
         <h1>is loading right</h1>
         <h2>Now</h2>
-      </div>
-    </div>
+      </div> -->
+    <!-- </div> -->
     <div id="wrapper" class="overflow-x-hidden" >
-      <div id="page1" class="h-screen w-full">
-        <div class="menu">
-          <i class="ri-close-large-fill"></i>
-          <div class="menuInner">
-            <h4 class="text-[18px] font-normal cursor-pointer">Home</h4>
-            <h4 class="text-[18px] font-normal cursor-pointer">Services</h4>
-            <h4 class="text-[18px] font-normal cursor-pointer"><a href="/findDoctor">Find a Docter</a></h4>
-            <h4 class="text-[18px] font-normal cursor-pointer">Contact</h4>
+      <div id="page1" class="relative h-screen w-full">
+        <div class="menu h-screen w-[35%] pt-40 z-10  top-0 ">
+            <div class="movement">
+                <h1 id="head1" class="text-[3vw] mt-1 font-semibold cursor-pointer">HOME</h1>
+                <h1 id="head2" class="text-[3vw] mt-1 font-semibold cursor-pointer">HOME</h1>
+            </div>
+           <div class="movement2 mt-4">
+              <h1 id="head1" class="text-[3vw] mt-1 font-semibold cursor-pointer">SERVICES</h1>
+              <h1 id="head2" class="text-[3vw] mt-1 font-semibold cursor-pointer">SERVICES</h1>
           </div>
+          <div class="movement3 mt-4">
+            <h1 id="head1" class="text-[3vw] mt-1 font-semibold cursor-pointer">FIND A DOCTOR</h1>
+            <h1 id="head2" class="text-[3vw] mt-1 font-semibold cursor-pointer">FIND A DOCTOR</h1>
+        </div>
+        <div class="movement4 mt-4">
+          <h1 id="head1" class="text-[3vw] mt-1 font-semibold cursor-pointer">CONTACT</h1>
+          <h1 id="head2" class="text-[3vw] mt-1 font-semibold cursor-pointer">CONTACT</h1>
+      </div> 
+           
+
+            <i class="ri-close-large-fill absolute top-[5%] right-[7%] px-4 p-3 font-bold bg-zinc-300 rounded-[50%] cursor-pointer"></i>
+        
         </div>
         <div class="nav px-20 py-6  w-full flex items-center justify-between">
           <div class="nav-l flex items-center">
@@ -90,7 +113,7 @@ href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scrol
           </div>
          
           <div class="nav-r">
-            <button class="px-5 py-2 font-medium border-[1px] border-gray-500 rounded-full"><a href="/login">Log in</a></button>
+            <img class="h-10 cursor-pointer" src="/images/menu.png" alt="">
           </div>
         </div>
         <div class="cen h-[85.3%] w-full flex">
@@ -214,16 +237,16 @@ href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scrol
   </div>
   <div id="page5" class="h-screen w-full">
     
-   </div>
+  </div>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
       integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="

@@ -17,20 +17,21 @@ function loco() {
       }, // we don't have to define a scrollLeft because we're only scrolling vertically.
       getBoundingClientRect() {
           return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
-      },
-      // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
-      pinType: document.querySelector("#wrapper").style.transform ? "transform" : "fixed"
-  });
-
-  // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
-  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-
-  // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
-  ScrollTrigger.refresh();
-
+        },
+        // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
+        pinType: document.querySelector("#wrapper").style.transform ? "transform" : "fixed"
+    });
+    
+    // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+    
+    // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
+    ScrollTrigger.refresh();
+    
 }
 
 loco()
+
 
 function loadingAnimation() {
   var tl = gsap.timeline()
@@ -83,3 +84,81 @@ var swiper = new Swiper(".mySwiper", {
   effect: "cards",
   grabCursor: true,
 });
+
+const menu = document.querySelector(".nav-r img")
+const cross = document.querySelector(".menu i")
+
+
+var tl2 = gsap.timeline()
+
+tl2.to(".menu",{
+    right:"0",
+    duration: 0.5,
+})
+tl2.from(".menu h1",{
+    x:150,
+    duration:"0.8",
+    stagger:0.12,
+    opacity:0
+
+})
+tl2.pause()
+
+menu.addEventListener("click",function(){
+    tl2.play()
+})
+
+cross.addEventListener("click",function(){
+    tl2.reverse()
+})  
+
+
+document.querySelector(".movement").addEventListener("mouseenter",function(){
+    gsap.to(".movement h1",{
+        y:"-100%",
+        duration:"0.3"
+    })
+})
+document.querySelector(".movement").addEventListener("mouseleave",function(){
+    gsap.to(".movement h1",{
+        y:"0%",
+        duration:"0.3"
+    })
+})
+
+document.querySelector(".movement2").addEventListener("mouseenter",function(){
+    gsap.to(".movement2 h1",{
+        y:"-100%",
+        duration:"0.3"
+    })
+})
+document.querySelector(".movement2").addEventListener("mouseleave",function(){
+    gsap.to(".movement2 h1",{
+        y:"0%",
+        duration:"0.3"
+    })
+})
+document.querySelector(".movement3").addEventListener("mouseenter",function(){
+    gsap.to(".movement3 h1",{
+        y:"-100%",
+        duration:"0.3"
+    })
+})
+document.querySelector(".movement3").addEventListener("mouseleave",function(){
+    gsap.to(".movement3 h1",{
+        y:"0%",
+        duration:"0.3"
+    })
+})
+document.querySelector(".movement4").addEventListener("mouseenter",function(){
+    gsap.to(".movement4 h1",{
+        y:"-100%",
+        duration:"0.3"
+    })
+})
+document.querySelector(".movement4").addEventListener("mouseleave",function(){
+    gsap.to(".movement4 h1",{
+        y:"0%",
+        duration:"0.3"
+    })
+})
