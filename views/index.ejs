@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>DocCare</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -43,7 +43,7 @@ href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scrol
       
       
     }
-    .movement,.movement2,.movement3,.movement4{
+    .movement,.movement2,.movement3,.movement4,.movement5{
     width: fit-content;
     /* background-color: black; */
     color: rgb(0, 0, 0);
@@ -53,7 +53,7 @@ href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scrol
 }
 
 
-.movement,.movement2,.movement3,.movement4 h1{
+.movement,.movement2,.movement3,.movement4,.movement5 h1{
   line-height: 3.5vw;
   position: relative;
   
@@ -66,7 +66,7 @@ href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scrol
     
   </style>
   <body>
-    <!-- <div id="loader">
+    <div id="loader">
       <div class="load">
         <div id="timer">
           <h4>0</h4>
@@ -80,8 +80,8 @@ href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scrol
       <div class="load">
         <h1>is loading right</h1>
         <h2>Now</h2>
-      </div> -->
-    <!-- </div> -->
+      </div>
+    </div>
     <div id="wrapper" class="overflow-x-hidden" >
       <div id="page1" class="relative h-screen w-full">
         <div class="menu h-screen w-[35%] pt-40 z-10  top-0 ">
@@ -94,13 +94,24 @@ href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scrol
               <h1 id="head2" class="text-[3vw] mt-1 font-semibold cursor-pointer">SERVICES</h1>
           </div>
           <div class="movement3 mt-4">
-            <h1 id="head1" class="text-[3vw] mt-1 font-semibold cursor-pointer">FIND A DOCTOR</h1>
-            <h1 id="head2" class="text-[3vw] mt-1 font-semibold cursor-pointer">FIND A DOCTOR</h1>
+        <a href="/doctor"><h1 id="head1" class="text-[3vw] mt-1 font-semibold cursor-pointer">FIND A DOCTOR</h1></a> 
+        <a href="/doctor">  <h1 id="head2" class="text-[3vw] mt-1 font-semibold cursor-pointer">FIND A DOCTOR</h1></a> 
         </div>
         <div class="movement4 mt-4">
           <h1 id="head1" class="text-[3vw] mt-1 font-semibold cursor-pointer">CONTACT</h1>
           <h1 id="head2" class="text-[3vw] mt-1 font-semibold cursor-pointer">CONTACT</h1>
+        
       </div> 
+      <% if(LoggedInUser.accountType === 'admin'){ %>
+        <div class="movement5 mt-4">
+          <a href="/createDoc"><h1 id="head1" class="text-[3vw] mt-1 font-semibold cursor-pointer">CREATE DOCTOR</h1></a>
+          <a href="/createDoc"><h1 id="head2" class="text-[3vw] mt-1 font-semibold cursor-pointer">CREATE DOCTOR</h1></a>
+
+      </div> 
+
+     <% } else{%>
+
+    <% } %>
            
 
             <i class="ri-close-large-fill absolute top-[5%] right-[7%] px-4 p-3 font-bold bg-zinc-300 rounded-[50%] cursor-pointer"></i>
@@ -126,7 +137,7 @@ href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scrol
               <h1 class="text-[5.5vw] leading-[5.5vw] tracking-tighter text-white   font-bold ">Health Anytime</h1>
             </div>
             <h1 class="text-[5.5vw] leading-[5.5vw] tracking-tighter text-white  font-bold">Anywhere<span class="text-teal-600">.</span></h1>
-
+              
             <p class="text-teal-900 font-semibold mt-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Animi commodi aliquid at quo voluptates quae?</p>
           </div>
           <div class="cen-r flex relative w-[35%]">
@@ -180,7 +191,7 @@ href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scrol
           </h1 >
           <p  class="text-gray-500 w-96 mt-6 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dolorem autem voluptates, fuga reprehenderit dolorum maiores et cum doloremque molestias eveniet obcaecati suscipit molestiae!</p>
 
-          <button class="px-8 py-4 bg-teal-500 text-2xl border-[#928d8d] hover:bg-teal-700 hover:text-white ease-in-out to-lime-400 hover:scale-[0.95] border-[1px] bg-transparent mt-8 rounded-tr-3xl  rounded-bl-3xl">Find Doctors</button>
+          <a href="/doctor">   <button class="px-8 py-4 bg-teal-500 text-2xl border-[#928d8d] hover:bg-teal-700 hover:text-white ease-in-out to-lime-400 hover:scale-[0.95] border-[1px] bg-transparent mt-8 rounded-tr-3xl  rounded-bl-3xl">Find Doctors</button> </a>
 
         </div>
         <div class="pg3-right">
@@ -256,3 +267,5 @@ href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scrol
     <script src="/javascripts/script.js"></script>
   </body>
 </html>
+
+

@@ -7,6 +7,7 @@ const DoctorSchema = new mongoose.Schema({
   name: { type: String, required: true },
   phone: { type: Number },
   photo: { type: String },
+  hospital: { type: String },
   ticketPrice: { type: Number },
   role: {
     type: String,
@@ -15,16 +16,16 @@ const DoctorSchema = new mongoose.Schema({
   // Fields for doctors only
   specialization: { type: String },
   qualifications: {
-    type: Array,
+    type: String,
   },
 
   experiences: {
-    type: Array,
+    type: String,
   },
 
   bio: { type: String, maxLength: 50 },
   about: { type: String },
-  timeSlots: { type: Array },
+  timeSlots: { type: String },
   averageRating: {
     type: Number,
     default: 0,
@@ -33,12 +34,7 @@ const DoctorSchema = new mongoose.Schema({
     type: Number,
     default: 0,
   },
-  isApproved: {
-    type: String,
-    enum: ["pending", "approved", "cancelled"],
-    default: "pending",
-  },
-  appointments: [{ type: mongoose.Types.ObjectId, ref: "Appointment" }],
+  appointments: [{ type: mongoose.Types.ObjectId, ref: "Booking" }],
 });
 
 module.exports= mongoose.model("Doctor", DoctorSchema);

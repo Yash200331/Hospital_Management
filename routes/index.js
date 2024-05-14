@@ -8,7 +8,8 @@ const { name } = require('ejs');
 passport.use(new localStrategy(userModel.authenticate()));
 /* GET home page. */
 router.get('/',isLoggedIn, function(req, res, next) {
-  res.render('index', { title: 'Express' }); 
+  const LoggedInUser = req.user;
+  res.render('index', { LoggedInUser }); 
 });
 router.get('/login', function(req, res, next) {
   res.render('login');
@@ -16,13 +17,25 @@ router.get('/login', function(req, res, next) {
 router.get('/createDoc', function(req, res, next) {
   res.render('createDoc');
 });
-router.get('/doctor',async function(req, res, next) {
-  const doctors=await doctorModel.find();
-  res.render('doctor',{doctors});
+router.get('/doctor', async function(req, res, next) {
+  try {
+    const doctors = await doctorModel.find();
+    console.log(doctors); // Log to check the structure
+    res.render('doctor', { doctors });
+  } catch (error) {
+    next(error);
+  }
 });
-router.get('/DoctorProfile',async function(req, res, next) {
-  const doctors=await doctorModel.findOne();
-  res.render('profileDoc');
+
+router.get('/DoctorProfile/:docId', async function(req, res, next) {
+  try {
+    const docId = req.params.docId;
+    const doctor = await doctorModel.findOne({ _id: docId });
+    console.log(doctor); // Log to check the structure
+    res.render('profileDoc', { doctor });
+  } catch (error) {
+    next(error);
+  }
 });
 router.post("/createDoc",async function(req,res,next){
   const doctor = await doctorModel.create({
