@@ -34,7 +34,7 @@ const DoctorSchema = new mongoose.Schema({
     type: Number,
     default: 0,
   },
-  appointments: [{ type: mongoose.Types.ObjectId, ref: "Booking" }],
+  // appointments: [{ type: mongoose.Types.ObjectId, ref: "Booking" }],
 });
 
 module.exports= mongoose.model("Doctor", DoctorSchema);

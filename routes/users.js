@@ -15,10 +15,10 @@ const userSchema=mongoose.Schema({
   username:String,
   email:String,
   password:String,
-  accountType:{
+  role:{
     type:String,
-    enums:["Patient","Admin"],
-    default:"Patient"
+    enums:["patient","admin",'doctor'],
+    default:"patient",
   }
 })
 

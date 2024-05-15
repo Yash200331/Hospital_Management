@@ -20,10 +20,6 @@ router.get('/createDoc', function(req, res, next) {
 router.get('/paymentPage', function(req, res, next) {
   res.render('paymentPage');
 });
-router.get('/doctor',async function(req, res, next) {
-  const doctors=await doctorModel.find();
-  res.render('doctor',{doctors});
-
 router.get('/doctor', async function(req, res, next) {
   try {
     const doctors = await doctorModel.find();
@@ -32,7 +28,6 @@ router.get('/doctor', async function(req, res, next) {
   } catch (error) {
     next(error);
   }
-
 });
 
 router.get('/DoctorProfile/:docId', async function(req, res, next) {
@@ -67,6 +62,32 @@ router.post("/createDoc",async function(req,res,next){
     isApproved:req.body.isApproved,
     appointments:req.body.appointments
   })
+  const { username, password, role } = req.body;
+try {
+  const existingAdmin = await userModel.findOne({ role: 'admin' });
+    if (role === 'admin' && existingAdmin) {
+      throw new Error('Admin already exists.'); 
+    }
+    else{
+      const user = await new userModel({
+        username: req.body.username,
+        name:req.body.name,
+        email:req.body.email,
+        role:req.body.role,
+      })
+      userModel.register(user,req.body.password)
+      .then(function(){
+      passport.authenticate('local')(req,res, function(err){
+        res.redirect('/')
+      })
+      })
+    }
+
+} catch (error) {
+  console.error(error);
+  res.render('login', { error: error.message });
+}
+
   res.redirect("/doctor");
 })
 router.post('/register', async function(req,res,next){
