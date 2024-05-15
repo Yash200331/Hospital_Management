@@ -43,7 +43,7 @@ href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scrol
       
       
     }
-    .movement,.movement2,.movement3,.movement4,.movement5{
+    .movement,.movement2,.movement3,.movement4{
     width: fit-content;
     /* background-color: black; */
     color: rgb(0, 0, 0);
@@ -53,7 +53,7 @@ href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scrol
 }
 
 
-.movement,.movement2,.movement3,.movement4,.movement5 h1{
+.movement,.movement2,.movement3,.movement4 h1{
   line-height: 3.5vw;
   position: relative;
   
@@ -61,6 +61,186 @@ href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scrol
  
 
 
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  gap: 50px;
+  padding: 0 80px;
+  text-align: center;
+  height: 100vh;
+  background: #EFEFBB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #D4D3DD, #EFEFBB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #d3e4d0, #f6f6d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.banner > img {
+  width: 60vw;
+  transition: 0.1s linear;
+}
+
+.banner h2 {
+  font-weight: 500;
+  font-size: 30px;
+  margin: 0 0 10px;
+}
+
+.banner p {
+  margin: 0;
+  line-height: 1.65;
+  font-size: 17px;
+  opacity: 0.7;
+}
+
+@media (width >= 420px) {
+  .banner > img {
+    width: 40vw;
+  }
+}
+
+@media (width >= 648px) {
+  .banner {
+    text-align: left;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .banner > img {
+    width: 10vw;
+    left: 100px;
+  }
+}
+
+.waves > use {
+  animation: move-forever 2s -2s linear infinite;
+}
+
+.waves > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 6s;
+}
+.waves > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 3s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 30vw;
+  max-height: 200px;
+}
+.footer {
+  background-color: #FFEFEF;
+  padding: 80px 0;
+  padding-left: 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-col h4 {
+  font-size: 20px;
+  color: #262222;
+  font-weight: 900;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #E91E63;
+  width: 50px;
+  height: 2px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color:rgb(81, 79, 79);
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+
+.footer-col ul li a:hover {
+  color: #000000;
+  padding-left: 7px;
+}
+
+.footer-col .social-links a {
+  color: #000000;
+  background-color: rgba(0, 0, 0, 0.344);
+  display: inline-block;
+  height: r0px;
+  width: 40px;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 10px 10px 0;
+  line-height: 40px;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: #151515;
+  background-color: #FFF;
+}
+
+@media(max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+
+@media(max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}
     
     
     
@@ -217,14 +397,16 @@ href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scrol
 
       
     </div>
-    <div class="page4-r h-full w-[50%]">
+    
+
+<div class="page4-r h-full w-[50%]">
       
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide ">
         <article class="profile">
           <div class="profile-image">
-            <img src="./images/img5.png" />
+            <img class="h-full w-full object-cover" src="./images/pro1.avif" />
           </div>
           <h2 class="profile-username">Elena Zoldado</h2>
           <small class="profile-user-handle">@elena_zoldado</small>
@@ -233,22 +415,191 @@ href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scrol
          
         </article>
       </div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
+      <div class="swiper-slide">
+        <article class="profile">
+          <div class="profile-image">
+            <img class="h-full w-full object-cover" src="./images/pro2.avif" />
+          </div>
+          <h2 class="profile-username">Nurse Michael Smith</h2>
+          <small class="profile-user-handle">@michael.smith_rn</small>
+          <p class="text-sm">This website has made my job as a nurse much easier. I can access patient information quickly, track medication administration, and communicate efficiently with other healthcare professionals.</p>
+        </article>
+      </div>
+      <div class="swiper-slide">
+        <article class="profile">
+          <div class="profile-image">
+            <img class="h-full w-full object-cover" src="./images/pro3.avif" />
+          </div>
+          <h2 class="profile-username">Anna Parker</h2>
+          <small class="profile-user-handle">@anna_parker</small>
+          <p class="text-sm">Managing my appointments and accessing my medical records has never been this convenient. This website simplifies the healthcare process and saves me a lot of time.</p>
+        </article>
+      </div>
+      <div class="swiper-slide">
+        <article class="profile">
+          <div class="profile-image">
+            <img class="h-full w-full object-cover" src="./images/pro4.avif" />
+          </div>
+          <h2 class="profile-username">David Brown</h2>
+          <small class="profile-user-handle">@david.brown_admin</small>
+          <p class="text-sm">From an administrative perspective, this website is a game-changer. It helps us streamline workflows, manage resources efficiently, and improve overall hospital operations.</p>
+        </article>
+        
+      </div>
+      <div class="swiper-slide">
+        <article class="profile">
+          <div class="profile-image">
+            <img class="h-full w-full object-cover" src="./images/pro5.avif" />
+          </div>
+          <h2 class="profile-username">Sarah White</h2>
+          <small class="profile-user-handle">@sarah.white_it</small>
+          <p class="text-sm">As an IT professional, I appreciate the robust security features and user-friendly interface of this website. It ensures patient data privacy while offering seamless access to essential information.</p>
+        </article>
+      </div>
+      <div class="swiper-slide">
+        <article class="profile">
+          <div class="profile-image">
+            <img class="h-full w-full object-cover" src="./images/pro5.avif" />
+          </div>
+          <h2 class="profile-username">John Davis</h2>
+          <small class="profile-user-handle">@john.davis_manager</small>
+          <p class="text-sm">This website provides comprehensive analytics and reporting tools, allowing us to make informed decisions and optimize hospital resources for better patient outcomes.</p>
+        </article>
+      </div>
+      <div class="swiper-slide">
+        <article class="profile">
+          <div class="profile-image">
+            <img class="h-full w-full object-cover" src="./images/pro6.avif" />
+          </div>
+          <h2 class="profile-username">Mark Thompson</h2>
+          <small class="profile-user-handle">@mark_thompson</small>
+          <p class="text-sm">As a patient, I feel more empowered with this website. I can easily schedule appointments, communicate with my healthcare team, and access educational resources to better manage my health.</p>
+        </article>
+      </div>
+      <div class="swiper-slide">
+        <article class="profile">
+          <div class="profile-image">
+            <img class="h-full w-full object-cover" src="./images/pro7.avif" />
+          </div>
+          <h2 class="profile-username">Dr. Jessica Adams</h2>
+          <small class="profile-user-handle">@jessica.adams_md</small>
+          <p class="text-sm">This website's integration with electronic health records has revolutionized patient care. It ensures seamless information flow between healthcare providers, resulting in better coordination and outcomes.</p>
+        </article>
+      </div>
+      <div class="swiper-slide">
+        <article class="profile">
+          <div class="profile-image">
+            <img class="h-full w-full object-cover" src="./images/pro8.avif" />
+          </div>
+          <h2 class="profile-username">Alex Turner</h2>
+          <small class="profile-user-handle">@alex.turner_it</small>
+          <p class="text-sm">This website's scalability and flexibility make it ideal for adapting to the evolving needs of our hospital. Its modular design allows for seamless integration with other healthcare systems, enhancing interoperability.</p>
+        </article>
+      </div>
     </div>
   </div>
     </div>
+      
+    </div>
+  
     
+
+
+
+
+
+
+
+
+<div id="page5" class="h-screen w-full bg-[#FFEFEF]">
+  <footer class="footer">
+    <div class="container row">
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Our services</a></li>
+          <li><a href="#">Find a doctor</a></li>
+          <li><a href="#">Privacy policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>get help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">shipping</a></li>
+          <li><a href="#">returns</a></li>
+          <li><a href="#">order status</a></li>
+          <li><a href="#">payment options</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>online shop</h4>
+        <ul>
+          <li><a href="#">download</a></li>
+          <li><a href="#">changelog</a></li>
+          <li><a href="#">github</a></li>
+          <li><a href="#">all version</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="#"><i class="ri-facebook-fill"></i></a>
+          <a href="#"><i class="ri-twitter-fill"></i></a>
+          <a href="#"><i class="ri-linkedin-fill"></i></a>
+          <a href="#"><i class="ri-instagram-fill"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
   </div>
-  <div id="page5" class="h-screen w-full">
-    
-  </div>
+
+
+
+
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28"
+    preserveAspectRatio="none"
+  >
+    <defs>
+      <path
+        id="gentle-wave"
+        d="M-160 44c30 0 
+      58-18 88-18s
+      58 18 88 18 
+      58-18 88-18 
+      58 18 88 18
+      v44h-352z"
+      />
+    </defs>
+    <g class="waves">
+      <use
+        xlink:href="#gentle-wave"
+        x="50"
+        y="0"
+        fill="#FFBB70"
+        fill-opacity=".2"
+      />
+      <use
+        xlink:href="#gentle-wave"
+        x="50"
+        y="3"
+        fill="#FFBB70"
+        fill-opacity=".5"
+      />
+      <use
+        xlink:href="#gentle-wave"
+        x="50"
+        y="6"
+        fill="#FFBB70"
+        fill-opacity=".9"
+      />
+    </g>
+  </svg>
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
     integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
