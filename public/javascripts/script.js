@@ -100,12 +100,12 @@ var tl2 = gsap.timeline()
 
 tl2.to(".menu",{
     right:"0",
-    duration: 0.5,
+    duration: 0.3,
 })
 tl2.from(".menu h1",{
     x:150,
-    duration:"0.8",
-    stagger:0.12,
+    duration:"0.3",
+    stagger:0.10,
     opacity:0
 
 })
@@ -167,5 +167,17 @@ document.querySelector(".movement4").addEventListener("mouseleave",function(){
     gsap.to(".movement4 h1",{
         y:"0%",
         duration:"0.3"
+    })  
+})
+document.querySelector(".movement5").addEventListener("mouseenter",function(){
+    gsap.to(".movement5 h1",{
+        y:"-100%",
+        duration:"0.3"
     })
+})
+document.querySelector(".movement5").addEventListener("mouseleave",function(){
+    gsap.to(".movement5 h1",{
+        y:"0%",
+        duration:"0.3"
+    })  
 })

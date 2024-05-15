@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>DocCare</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -43,7 +43,7 @@ href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scrol
       
       
     }
-    .movement,.movement2,.movement3,.movement4{
+    .movement,.movement2,.movement3,.movement4,.movement5{
     width: fit-content;
     /* background-color: black; */
     color: rgb(0, 0, 0);
@@ -53,7 +53,7 @@ href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scrol
 }
 
 
-.movement,.movement2,.movement3,.movement4 h1{
+.movement,.movement2,.movement3,.movement4,.movement5 h1{
   line-height: 3.5vw;
   position: relative;
   
@@ -61,192 +61,12 @@ href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scrol
  
 
 
-.banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column-reverse;
-  gap: 50px;
-  padding: 0 80px;
-  text-align: center;
-  height: 100vh;
-  background: #EFEFBB;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #D4D3DD, #EFEFBB);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #d3e4d0, #f6f6d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-}
-
-.banner > img {
-  width: 60vw;
-  transition: 0.1s linear;
-}
-
-.banner h2 {
-  font-weight: 500;
-  font-size: 30px;
-  margin: 0 0 10px;
-}
-
-.banner p {
-  margin: 0;
-  line-height: 1.65;
-  font-size: 17px;
-  opacity: 0.7;
-}
-
-@media (width >= 420px) {
-  .banner > img {
-    width: 40vw;
-  }
-}
-
-@media (width >= 648px) {
-  .banner {
-    text-align: left;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .banner > img {
-    width: 10vw;
-    left: 100px;
-  }
-}
-
-.waves > use {
-  animation: move-forever 2s -2s linear infinite;
-}
-
-.waves > use:nth-child(2) {
-  animation-delay: -3s;
-  animation-duration: 6s;
-}
-.waves > use:nth-child(3) {
-  animation-delay: -4s;
-  animation-duration: 3s;
-}
-
-@keyframes move-forever {
-  0% {
-    transform: translate(-90px, 0%);
-  }
-  100% {
-    transform: translate(85px, 0%);
-  }
-}
-
-svg {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 30vw;
-  max-height: 200px;
-}
-.footer {
-  background-color: #FFEFEF;
-  padding: 80px 0;
-  padding-left: 6vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.container {
-  max-width: 1170px;
-  margin: auto;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-ul {
-  list-style: none;
-}
-
-.footer-col {
-  width: 25%;
-  padding: 0 15px;
-}
-
-.footer-col h4 {
-  font-size: 20px;
-  color: #262222;
-  font-weight: 900;
-  text-transform: capitalize;
-  margin-bottom: 35px;
-  font-weight: 500;
-  position: relative;
-}
-
-.footer-col h4::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  background-color: #E91E63;
-  width: 50px;
-  height: 2px;
-}
-
-.footer-col ul li:not(:last-child) {
-  margin-bottom: 10px;
-}
-
-.footer-col ul li a {
-  color:rgb(81, 79, 79);
-  display: block;
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: capitalize;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-
-.footer-col ul li a:hover {
-  color: #000000;
-  padding-left: 7px;
-}
-
-.footer-col .social-links a {
-  color: #000000;
-  background-color: rgba(0, 0, 0, 0.344);
-  display: inline-block;
-  height: r0px;
-  width: 40px;
-  border-radius: 50%;
-  text-align: center;
-  margin: 0 10px 10px 0;
-  line-height: 40px;
-  transition: all 0.5s ease;
-}
-
-.footer-col .social-links a:hover {
-  color: #151515;
-  background-color: #FFF;
-}
-
-@media(max-width: 767px) {
-  .footer-col {
-    width: 50%;
-    margin-bottom: 30px;
-  }
-}
-
-@media(max-width: 574px) {
-  .footer-col {
-    width: 100%;
-  }
-}
     
     
     
   </style>
   <body>
-     <div id="loader">
+    <div id="loader">
       <div class="load">
         <div id="timer">
           <h4>0</h4>
@@ -255,10 +75,10 @@ ul {
         <h1>DocCare</h1>
       </div>
       <div class="load">
-        <h1 class="load-h1 uppercase">Health Hospital . . . . . </h1>
+        <h1 class="load-h1">Health Hospital . . . . . </h1>
       </div>
       <div class="load">
-        <h1 class="uppercase">is loading right</h1>
+        <h1>is loading right</h1>
         <h2>Now</h2>
       </div>
     </div>
@@ -274,15 +94,24 @@ ul {
               <h1 id="head2" class="text-[3vw] mt-1 font-semibold cursor-pointer">SERVICES</h1>
           </div>
           <div class="movement3 mt-4">
-            <a href="/paymentPage">
-              <h1 id="head1" class="text-[3vw] mt-1 font-semibold cursor-pointer">FIND A DOCTOR</h1>
-              <h1 id="head2" class="text-[3vw] mt-1 font-semibold cursor-pointer">FIND A DOCTOR</h1>
-            </a>
+        <a href="/doctor"><h1 id="head1" class="text-[3vw] mt-1 font-semibold cursor-pointer">FIND A DOCTOR</h1></a> 
+        <a href="/doctor">  <h1 id="head2" class="text-[3vw] mt-1 font-semibold cursor-pointer">FIND A DOCTOR</h1></a> 
         </div>
         <div class="movement4 mt-4">
           <h1 id="head1" class="text-[3vw] mt-1 font-semibold cursor-pointer">CONTACT</h1>
           <h1 id="head2" class="text-[3vw] mt-1 font-semibold cursor-pointer">CONTACT</h1>
+        
       </div> 
+      <% if(LoggedInUser.accountType === 'admin'){ %>
+        <div class="movement5 mt-4">
+          <a href="/createDoc"><h1 id="head1" class="text-[3vw] mt-1 font-semibold cursor-pointer">CREATE DOCTOR</h1></a>
+          <a href="/createDoc"><h1 id="head2" class="text-[3vw] mt-1 font-semibold cursor-pointer">CREATE DOCTOR</h1></a>
+
+      </div> 
+
+     <% } else{%>
+
+    <% } %>
            
 
             <i class="ri-close-large-fill absolute top-[5%] right-[7%] px-4 p-3 font-bold bg-zinc-300 rounded-[50%] cursor-pointer"></i>
@@ -302,13 +131,13 @@ ul {
           <div class="cen-l pl-20 pt-36 w-[65%] ">
             <h1 class="text-[5.5vw] leading-[8vw] tracking-tighter font-bold text-teal-600">Take Care of Your</h1>
             <div class="flex items-center">
-                <div class="gif h-20 w-32 rounded-lg  overflow-hidden">
+                <div class="h-20 w-32 rounded-lg  overflow-hidden">
                   <img src="/images/img7.gif" class="w-full h-full overflow-hidden" alt="">
                 </div>
               <h1 class="text-[5.5vw] leading-[5.5vw] tracking-tighter text-white   font-bold ">Health Anytime</h1>
             </div>
             <h1 class="text-[5.5vw] leading-[5.5vw] tracking-tighter text-white  font-bold">Anywhere<span class="text-teal-600">.</span></h1>
-
+              
             <p class="text-teal-900 font-semibold mt-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Animi commodi aliquid at quo voluptates quae?</p>
           </div>
           <div class="cen-r flex relative w-[35%]">
@@ -362,7 +191,7 @@ ul {
           </h1 >
           <p  class="text-gray-500 w-96 mt-6 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dolorem autem voluptates, fuga reprehenderit dolorum maiores et cum doloremque molestias eveniet obcaecati suscipit molestiae!</p>
 
-          <button class="px-8 py-4 bg-teal-500 text-2xl border-[#928d8d] hover:bg-teal-700 hover:text-white ease-in-out to-lime-400 hover:scale-[0.95] border-[1px] bg-transparent mt-8 rounded-tr-3xl  rounded-bl-3xl">Find Doctors</button>
+          <a href="/doctor">   <button class="px-8 py-4 bg-teal-500 text-2xl border-[#928d8d] hover:bg-teal-700 hover:text-white ease-in-out to-lime-400 hover:scale-[0.95] border-[1px] bg-transparent mt-8 rounded-tr-3xl  rounded-bl-3xl">Find Doctors</button> </a>
 
         </div>
         <div class="pg3-right">
@@ -417,91 +246,8 @@ ul {
     </div>
     
   </div>
-  <div id="page5" class="h-screen w-full bg-[#FFEFEF]">
-    <footer class="footer">
-      <div class="container row">
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Our services</a></li>
-            <li><a href="#">Find a doctor</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>get help</h4>
-          <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">shipping</a></li>
-            <li><a href="#">returns</a></li>
-            <li><a href="#">order status</a></li>
-            <li><a href="#">payment options</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>online shop</h4>
-          <ul>
-            <li><a href="#">download</a></li>
-            <li><a href="#">changelog</a></li>
-            <li><a href="#">github</a></li>
-            <li><a href="#">all version</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>follow us</h4>
-          <div class="social-links">
-            <a href="#"><i class="ri-facebook-fill"></i></a>
-            <a href="#"><i class="ri-twitter-fill"></i></a>
-            <a href="#"><i class="ri-linkedin-fill"></i></a>
-            <a href="#"><i class="ri-instagram-fill"></i></a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      viewBox="0 24 150 28"
-      preserveAspectRatio="none"
-    >
-      <defs>
-        <path
-          id="gentle-wave"
-          d="M-160 44c30 0 
-        58-18 88-18s
-        58 18 88 18 
-        58-18 88-18 
-        58 18 88 18
-        v44h-352z"
-        />
-      </defs>
-      <g class="waves">
-        <use
-          xlink:href="#gentle-wave"
-          x="50"
-          y="0"
-          fill="#FFBB70"
-          fill-opacity=".2"
-        />
-        <use
-          xlink:href="#gentle-wave"
-          x="50"
-          y="3"
-          fill="#FFBB70"
-          fill-opacity=".5"
-        />
-        <use
-          xlink:href="#gentle-wave"
-          x="50"
-          y="6"
-          fill="#FFBB70"
-          fill-opacity=".9"
-        />
-      </g>
-    </svg>
-  </body>
+  <div id="page5" class="h-screen w-full">
+    
   </div>
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
@@ -521,3 +267,4 @@ ul {
     <script src="/javascripts/script.js"></script>
   </body>
 </html>
+
