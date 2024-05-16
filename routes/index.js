@@ -5,6 +5,7 @@ const localStrategy=require('passport-local');
 const passport = require('passport');
 const doctorModel=require('./DoctorSchema');
 const { name } = require('ejs');
+const upload = require('./multer')
 passport.use(new localStrategy(userModel.authenticate()));
 /* GET home page. */
 router.get('/',isLoggedIn, function(req, res, next) {
@@ -40,14 +41,14 @@ router.get('/DoctorProfile/:docId', async function(req, res, next) {
     next(error);
   }
 });
-router.post("/createDoc",async function(req,res,next){
+router.post("/createDoc",upload.single("image") ,async function(req,res,next){
   const doctor = await doctorModel.create({
     username:req.body.username,
     email:req.body.email,
     password:req.body.password,
     name:req.body.name,
     phone:req.body.phone,
-    photo:req.body.photo,
+    image:req.file.filename,
     ticketPrice:req.body.ticketPrice,
     role:req.body.role,
     specialization:req.body.specialization,
