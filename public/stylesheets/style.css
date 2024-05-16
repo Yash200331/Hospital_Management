@@ -20,12 +20,12 @@
 #loader {
 	height: 100vh;
 	width: 100%;
-	background-color: #000;
+	background-color: #AAD9BB;
 	position: fixed;
 	padding-top: 15vh;
 	padding-left: 8vw;
 	z-index: 999;
-	color: #fff;
+	
 	/* display: none; */
   }
   .load {
@@ -45,7 +45,7 @@
   
   .load h1 {
 	font-size: 7vw;
-	color: var(--secondary);
+	
 	position: relative;
 	font-weight: 500;
 
@@ -55,7 +55,7 @@
 	margin-left: 2vw;
 	text-transform: uppercase;
 	animation-name: now;
-  
+	
 	animation-timing-function: linear;
 	animation-duration: 1.5s;
 	animation-iteration-count: infinite;
@@ -70,19 +70,19 @@
 	  font-family: "Plain Light";
 	  -webkit-text-stroke: 1px transparent;
 	  opacity: 1;
-	  color: white;
+	  color: black;
 	  font-weight: 100;
 	}
 	45% {
 	  font-family: "Plain Light";
 	  -webkit-text-stroke: 1px transparent;
 	  opacity: 0;
-	  color: white;
+	  
 	  font-weight: 100;
 	}
 	50% {
 	  font-family: "Silk Serif";
-	  -webkit-text-stroke: 1px var(--secondary);
+	  -webkit-text-stroke: 2px black;
 	  opacity: 1;
 	  color: transparent;
 	  font-weight: 100;
@@ -99,7 +99,7 @@
 	  font-family: "Plain Light";
 	  -webkit-text-stroke: 1px transparent;
 	  opacity: 1;
-	  color: white;
+	  color: black;
 	  font-weight: 100;
 	}
   }
