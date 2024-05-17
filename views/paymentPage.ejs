@@ -268,12 +268,12 @@ input::-webkit-outer-spin-button {
 				</div> 
                 <div class="col"> 
 					
-					<h1 class="font-semibold text-2xl text-red-500">Dr. Ankit Jhurjhuriya</h1>
+					<h1 class="font-semibold text-2xl text-red-500"><%=doctor.name%></h1>
                     <div class="img mt-5 overflow-hidden rounded-lg bg-red-300 w-[80%] h-[40%]">
-                        <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1530210124550-912dc1381cb8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                        <img class="h-full w-full object-cover" src="/uploads/<%=doctor.image%>" alt="">
 
                     </div>
-                    <h1 class="font-semibold text-3xl mt-5 ml-4 text-zinc-600"> $400</h1>
+                    <h1 class="font-semibold text-3xl mt-5 ml-4 text-zinc-600"> $<%=doctor.ticketPrice%></h1>
                     <h4 class="font-semibold mt-2 ml-4 text-teal-6\700">Specialization in Nuorology</h4>
 
 				</div> 

@@ -150,6 +150,7 @@
     <section class="wrapper">
       <div class="form signup">
         <header>Signup</header>
+        <p class="text-xl mt-10 text-black font-bold">You are signIn  <span class="text-white" >DocCare</span><span class="text-orange-200">.</span></p>
         <form action="/register" method="post">
           <input type="text" placeholder="Full name" required name="username"/>
           <input type="text" placeholder="Email address" required name="email" />
@@ -176,8 +177,9 @@
 
       <div class="form login">
         <header>Login</header>
+        <p class="text-xl text-black mt-6 font-bold">You are Logginig <span class="text-teal-700" >DocCare</span><span class="text-orange-200">.</span></p>
         <form action="/login" method="post">
-          <input type="text" placeholder="Email address" required name="username" />
+          <input type="text" placeholder="Enter Username" required name="username" />
           <input type="password" placeholder="Password" required name="password"/>
           <a href="#">Forgot password?</a>
           <input type="submit" value="Login" />

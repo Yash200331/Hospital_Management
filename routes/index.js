@@ -18,8 +18,10 @@ router.get('/login', function(req, res, next) {
 router.get('/createDoc', function(req, res, next) {
   res.render('createDoc');
 });
-router.get('/paymentPage', function(req, res, next) {
-  res.render('paymentPage');
+router.get('/paymentPage/:docId',async function(req, res, next) {
+  const docId = req.params.docId;
+  const doctor = await doctorModel.findOne({ _id: docId });
+  res.render('paymentPage',{doctor});
 });
 router.get('/doctor', async function(req, res, next) {
   try {
@@ -52,7 +54,7 @@ router.post("/createDoc",upload.single("image") ,async function(req,res,next){
     ticketPrice:req.body.ticketPrice,
     role:req.body.role,
     specialization:req.body.specialization,
-    qualification:req.body.qualification,
+    qualifications:req.body.qualifications,
     experiences:req.body.experiences,
     bio:req.body.bio,
     about:req.body.about,

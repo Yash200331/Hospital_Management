@@ -55,7 +55,7 @@
             <span class=" font-semibold uppercase">Qualification</span>
           </h3>
           <p class="opacity-80 text-[18px] mt-3 w-[95%]">
-            <%=doctor.qualification%> Lorem, ipsum dolor.
+           <%=doctor.qualifications%> 
            
           </p>
           
@@ -83,7 +83,7 @@
         <div class="card drop-shadow-2xl  rounded-lg p-3 w-[45%] bg-zinc-300">
           <div class="flex items-center justify-between">
             <h3 class="text-[18px] font-semibold text-zinc-900">Ticket Price</h3>
-            <h4 class="text-[20px] font-semibold">$100</h4>
+            <h4 class="text-[20px] font-semibold">$<%=doctor.ticketPrice%></h4>
           </div>
           <h3 class="text-[20px] mt-2 font-semibold">Available Time Slots:</h3>
           <div class="flex items-center justify-between mt-2">
@@ -98,7 +98,7 @@
             <h3 class="text-[18px] font-semibold text-zinc-900">Thursday:</h3>
             <h4 class="text-[18px] font-semibold text-zinc-900">5:30-8:30</h4>
           </div>
-          <a href="/paymentPage">
+          <a href="/paymentPage/<%=doctor._id%>">
             <div class="flex items-center justify-center bg-blue-500 rounded-md mt-4 py-3 text-xl text-white font-semibold">Book Appointment</div>
           </a>
         </div>
